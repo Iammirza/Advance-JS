@@ -166,18 +166,62 @@
 // console.log(obj.show());
 
 
-let f = "first"
+// let f = "first"
 
-var obj = {
-    [f + "name"] : "Muhammad Ahmad", // also concat in Object literal
-    course : "BSCS",
-    city : "Okara",
-    'detail show'(){
-      return  ` Hello This is ${this.firstname} and He is Student of ${this.course} and Belong to ${this.city}`
-    } 
-}
+// var obj = {
+//     [f + "name"] : "Muhammad Ahmad", // also concat in Object literal
+//     course : "BSCS",
+//     city : "Okara",
+//     'detail show'(){
+//       return  ` Hello This is ${this.firstname} and He is Student of ${this.course} and Belong to ${this.city}`
+//     } 
+// }
 
-console.log(obj['detail show']()); // second method
+// console.log(obj['detail show']()); // second method
+
+
+// let fname = "Muhammad";
+// let lname = "Ahmad"
+// let course = "BSCS"
+
+// function student(fname, lname, course){
+//   let fullname = fname + " " + lname
+//   return {
+//     fullname, 
+//     course
+//   }
+// }
+
+// console.log(student(fname, lname, course))
+
+// // One More Method  to get Single Individual Value
+
+// let s = student(fname, lname, course)
+
+// console.log(s.fullname)
+// console.log(s.course)
+
+// Second example from Above Concepts
+
+// let fname1 = "Muhammad";
+// let lname1 = "Ahmad"
+// let course1 = "BSCS"
+
+// function student1(fname1, lname1, course1){
+//   return {
+//     fname1,
+//     lname1, 
+//     course1
+//   }
+// }
+
+// // One More Method  to get Single Individual Value
+
+// let s1 = student1(fname1, lname1, course1)
+
+// console.log(s1.fname1)
+// console.log(s1.lname1)
+// console.log(s1.course1)
 
 
 
