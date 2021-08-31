@@ -489,9 +489,52 @@
     //   console.log(error)
     // })
 
+    
+    
 
+                // ------------------ AJAX ------------------------- // 
 
-            // ------------------ AJAX ------------------------- //  
+// Create an XMLHttpRequest object
+// document.getElementById("demoBtn").click = loadDoc();
+
+// // Define a callback function
+// function loadDoc() {
+//   const xhttp = new XMLHttpRequest();
+//   xhttp.onload = function() {
+//     document.getElementById("demo").innerHTML =
+//     this.responseText;
+//   }
+// // Send a request
+// xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts");
+// xhttp.send();
+
+// }
+
+// Alternative of AJAX is Fetch API ()
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+// .then(function(response){
+//   return response.json()
+// })
+// .then(function(data){
+//   console.log(data)
+// })
+
+// Short Code ------------------------------
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((response) => {
+  return response.json()
+  
+})
+.then((data) => {
+  console.log(data)
+  for (let i in data){
+    console.log(`${data[i].name} -- ${data[i].email}`)
+  }
+}).catch((error) => {
+  console.log("Can't Fetch Data")
+})
 
 
 
