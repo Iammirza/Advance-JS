@@ -522,21 +522,133 @@
 
 // Short Code ------------------------------
 
-fetch("https://jsonplaceholder.typicode.com/users")
-.then((response) => {
-  return response.json()
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then((response) => {
+//   return response.json()
   
+// })
+// .then((data) => {
+//   console.log(data)
+//   for (let i in data){
+//     document.write(`${data[i].name} -- ${data[i].email} <br>`)
+//   }
+// }).catch((error) => {
+//   console.log("Can't Fetch Data")
+// })
+
+
+// fetch("https://jsonplaceholder.typicode.com/users" , {
+//   method: 'POST',
+//   body: JSON.stringify({
+//     title: 'foo',
+//     body : 'bar',
+//     userId : '1',
+//   }),
+//   headers : {
+//     'Content-type' : 'application/json; charset=UTF-8',
+//   }
+// })
+// .then((response) => response.json())
+// .then((data) => console.log(data))
+// .catch((error) => console.log("Can't Fetch"))
+
+// INsert the Data
+
+// let obj = {
+//   title: 'foo',
+//   body : 'bar',
+//   userId : '1',
+// }
+// fetch("https://jsonplaceholder.typicode.com/users" , {
+//   method: 'POST',
+//   body: JSON.stringify(obj),
+//   headers : {
+//     'Content-type' : 'application/json; charset=UTF-8',
+//   }
+// })
+// .then((response) => response.json())
+// .then((data) => console.log(data))
+// .catch((error) => console.log("Can't Fetch"))
+
+
+// change the Specific Data
+
+// fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//   method: 'PUT',
+//   body: JSON.stringify({
+//     id: 1,
+//     name : 'Ahmad',
+//     title: 'foo',
+//     body: 'bar',
+//     userId: 1,
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+
+// PATCH the DATA
+
+//   fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//   method: 'PATCH',
+//   body: JSON.stringify({
+//     title: 'fooo',
+//   }),
+//   headers: {
+//     'Content-type': 'application/json; charset=UTF-8',
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+
+// DELETE the DATA
+
+//   fetch('https://jsonplaceholder.typicode.com/posts/1', {
+//   method: 'DELETE',
+// });
+
+
+// FETCH FORM DATA
+
+// document.getElementById('saveForm').addEventListener("click", function(e){
+//   e.preventDefault();
+//   let obj = {
+//     title: document.getElementById("title").value,
+//     body : document.getElementById("title").value,
+//     userId : document.getElementById("title").value,
+//   }
+//   fetch("https://jsonplaceholder.typicode.com/users" , {
+//     method: 'POST',
+//     body: JSON.stringify(obj),
+//     headers : {
+//       'Content-type' : 'application/json; charset=UTF-8',
+//     }
+//   })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log("Can't Fetch"))
+// })
+
+
+document.getElementById('saveForm').addEventListener("click", function(e){
+  e.preventDefault();
+  // let obj = {
+  //   title: document.getElementById("title").value,
+  //   body : document.getElementById("title").value,
+  //   userId : document.getElementById("title").value,
+  // }
+  fetch("https://jsonplaceholder.typicode.com/users" , {
+    method: 'POST',
+    body: new FormData(document.getElementById("subForm")),
+    headers : {
+      'Content-type' : 'application/x-www-form-urlencoded; charset=UTF-8',
+    }
+  })
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log("Can't Fetch"))
 })
-.then((data) => {
-  console.log(data)
-  for (let i in data){
-    console.log(`${data[i].name} -- ${data[i].email}`)
-  }
-}).catch((error) => {
-  console.log("Can't Fetch Data")
-})
-
-
-
-
-
