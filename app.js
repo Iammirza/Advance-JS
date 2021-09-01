@@ -657,22 +657,48 @@
 
 // ------------------ ITERATOR ------------------------- // 
 
-function numberFunction(arr){
-  let nextNum = 0;
-  return {
-    next(){
-      return {
-        value : arr[nextNum++],
-        done: false
-      }
-    }
-  }
-}
+// function numberFunction(arr){
+//   let nextNum = 0;
+//   return {
+//     next(){
+//       if(nextNum < arr.length){
+//         return {
+//           value : arr[nextNum++],
+//           done: false
+//         }
+//       } else { return {done: true}}
+
+//     }
+//   }
+// }
 
 
-let numbers = [100, 200, 300, 400, 500]
+// let numbers = [100, 200, 300, 400, 500];
+// console.log(numbers[0])
 
-let num = numberFunction(numbers)
+// let num = numberFunction(numbers);
+
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+// console.log(num.next())
+
+// // Real Itration Method
+
+// let iter = [100, 200, 300, 400, 500];
+
+// let x = iter[Symbol.iterator]()
+
+// console.log(x.next())
+// console.log(x.next())
+// console.log(x.next())
+// console.log(x.next())
+// console.log(x.next())
+// console.log(x.next())
 
 
 
+
+// ------------------ GENERATORs ------------------------- // 
