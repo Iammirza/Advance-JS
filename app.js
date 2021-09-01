@@ -634,21 +634,45 @@
 // })
 
 
-document.getElementById('saveForm').addEventListener("click", function(e){
-  e.preventDefault();
-  // let obj = {
-  //   title: document.getElementById("title").value,
-  //   body : document.getElementById("title").value,
-  //   userId : document.getElementById("title").value,
-  // }
-  fetch("https://jsonplaceholder.typicode.com/users" , {
-    method: 'POST',
-    body: new FormData(document.getElementById("subForm")),
-    headers : {
-      'Content-type' : 'application/x-www-form-urlencoded; charset=UTF-8',
+// document.getElementById('saveForm').addEventListener("click", function(e){
+//   e.preventDefault();
+//   // let obj = {
+//   //   title: document.getElementById("title").value,
+//   //   body : document.getElementById("title").value,
+//   //   userId : document.getElementById("title").value,
+//   // }
+//   fetch("https://jsonplaceholder.typicode.com/users" , {
+//     method: 'POST',
+//     body: new FormData(document.getElementById("subForm")),
+//     headers : {
+//       'Content-type' : 'application/x-www-form-urlencoded; charset=UTF-8',
+//     }
+//   })
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log("Can't Fetch"))
+// }) 
+
+
+
+// ------------------ ITERATOR ------------------------- // 
+
+function numberFunction(arr){
+  let nextNum = 0;
+  return {
+    next(){
+      return {
+        value : arr[nextNum++],
+        done: false
+      }
     }
-  })
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.log("Can't Fetch"))
-})
+  }
+}
+
+
+let numbers = [100, 200, 300, 400, 500]
+
+let num = numberFunction(numbers)
+
+
+
