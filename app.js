@@ -701,4 +701,109 @@
 
 
 
-// ------------------ GENERATORs ------------------------- // 
+// ------------------ GENERATORs ------------------------- //
+ 
+// function *generateIt(){
+//   yield console.log("First")
+//   yield console.log("Second")
+//   yield console.log("Third")
+// }
+
+// let g = generateIt();
+
+// g.next();
+// g.next();
+// g.next();
+
+//------------------------
+
+// function *generateItt (){
+//   yield 55;
+//   yield* [100, 200, 300, 400]
+// }
+
+// let a = generateItt();
+
+// console.log(a.next())
+// console.log(a.next().value)
+// console.log(a.next().value)
+// console.log(a.next().value)
+// console.log(a.next().value)
+
+//----------------------------
+
+// function *generateIttt(){
+//   yield 100;
+//   yield 200;
+//   yield 300;
+//   yield 400;
+//   yield 500;
+//   yield 600;
+
+// }
+
+// let b = generateIttt();
+
+// console.log(b.next())
+// console.log(b.next())
+// console.log(([...b]))
+
+//--------------------------
+
+
+// function *generateIttt(){
+//   yield 100;
+//   yield 200;
+//   yield 300;
+//   yield 400;
+//   yield 500;
+//   yield 600;
+
+// }
+
+// let b = generateIttt();
+
+// console.log(b.next())
+// console.log(b.next())
+// console.log(b.next())
+// console.log(b.return())
+// console.log(b.next())
+
+
+// function *generateItttt(){
+//   let nextNum = 300;
+//   while(true) {
+//     yield (nextNum++)
+//   }
+
+// }
+
+// let b = generateItttt();
+// console.log(b.next())
+// console.log(b.next())
+// console.log(b.next())
+// console.log(b.next())
+// console.log(b.next())
+
+//-------------------------------------
+
+// function *generateItttt(){
+//   let nextNum = 300;
+//   while(true) {
+//     yield (nextNum++)
+//   }
+
+// }
+
+// let b = generateItttt();
+// for (let value of b){
+//   if(value > 310) break;
+//   console.log(value)
+// }
+
+
+
+
+
+
+
