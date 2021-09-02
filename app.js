@@ -807,3 +807,46 @@
 
 
 
+// ------------------ STRICT MODE ------------------------- //
+
+"use strict"
+
+
+// function test1(a, b, c){
+//   console.log( a + b + c)
+// }
+// test1(10, 20, 30)
+
+
+
+//  function test(a, b, b){
+//    console.log( a + b + b)
+//  }
+//  test(10, 20, 30)
+
+// ------------------ TRY AND CATCH ------------------------- //
+
+try {
+  blaldal;
+} 
+catch(error) {
+
+  if(error instanceof ReferenceError){
+    console.log("Ref")
+  } else if(error instanceof TypeError) {
+    console.log("Type")
+  } else {
+    console.log("Unknown")
+  }
+
+}
+
+/* 
+  Eval Error
+  RANGE ERROR
+  REFERENCE ERROR
+  SYNTAX ERROR
+  TYPE ERROR
+  URI ERRRO
+  AGGREGATE ERROR
+*/
